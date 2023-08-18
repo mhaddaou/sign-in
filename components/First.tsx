@@ -8,14 +8,14 @@ import { useDispatch } from 'react-redux';
 import Modal from './Modal';
 function First() {
     const [show, setShow] = useState(false);
-    const [isOpen , setIsOpen] = useState(true);
+    const [isOpen , setIsOpen] = useState(false);
     const closeModal = () =>{
         setIsOpen(false)
     }
    
   return (
    <section className='bg-bg'>
-    {/* <Modal isOpen={isOpen} closeModal={closeModal}/> */}
+    {isOpen &&  <Modal isOpen={isOpen} closeModal={closeModal}/> }
     <div className='pb-20 container mx-auto'>
         <div className='text-slate-800 text-center py-5'>
             <MessageWriter />
@@ -35,16 +35,8 @@ function First() {
                 </div>
                 <div className='text-slate-800 flex justify-center  '>
                 <div className="w-full px-3 mb-5">
-                            <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
+                            <button onClick={() => setIsOpen(true)} className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
                         </div>
-                    {/* <div className='bg-slate-500 rounded-full p-1 bg-gradient-to-r from-red-800 via-cyan-500 to-slate-500 transition-all duration-700  hover:from-slate-500 hover:via-red-800 hover:to-cyan-500  flex  justify-center items-center'>
-
-                    <button onClick={() =>dispatch(googleSignInAsync())} className='flex gap-10 text-xl justify-center items-center  px-6 py-2 bg-bg rounded-full '>
-                        
-                        <span className=' font-bold tracking-wide'>Sign up </span>
-                    </button>
-                    </div> */}
-  
                 </div>
             </div>
             <div className='lg:w-1/2 w-full '>
