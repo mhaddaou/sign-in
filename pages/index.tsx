@@ -12,7 +12,7 @@ function Index() {
   
   return (
     <main className='text-3xl font-extrabold underline font-mono hover:opacity-50 cursor-pointer hover:no-underline'>
-      {/* Your component content */}
+      hello
     </main>
   );
 }
