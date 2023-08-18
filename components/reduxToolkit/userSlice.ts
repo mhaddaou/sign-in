@@ -18,6 +18,9 @@ type initialType = {
     education : string;
     location : locationType;
     img : string;
+    doneFirst : boolean;
+    doneSecond : boolean;
+    doneThird : boolean;
 }
 
 const initialState : initialType = {
@@ -35,6 +38,9 @@ const initialState : initialType = {
         city : "",
     },
     img: '',
+    doneFirst : false,
+    doneSecond : false,
+    doneThird : false,
 }
 
 const userSlice = createSlice({
@@ -64,9 +70,18 @@ const userSlice = createSlice({
         },
         setImage : (state, action : PayloadAction<string>) =>{
             state.img = action.payload;
-        }
+        },
+        setFirst : (state, action : PayloadAction<boolean>) =>{
+            state.doneFirst = action.payload; 
+        },
+        setSecond : (state, action : PayloadAction<boolean>) =>{
+            state.doneSecond = action.payload; 
+        },
+        setThird : (state, action : PayloadAction<boolean>) =>{
+            state.doneThird = action.payload; 
+        },
     }
 })
 
-export const {setFirstName, setLastName, setEmail, setPhone, setHeading, setEducation, setLocation, setImage} = userSlice.actions;
+export const {setFirstName, setLastName, setEmail, setPhone, setHeading, setEducation, setLocation, setImage, setFirst, setSecond, setThird} = userSlice.actions;
 export default userSlice.reducer;
