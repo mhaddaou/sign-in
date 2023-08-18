@@ -17,7 +17,7 @@ function Index() {
   
   return (
     <main className=''>
-    <header className='bg-white'>
+    <header className='h-16 bg-white'>
       <Header />
     </header>
   <First/>

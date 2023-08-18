@@ -19,31 +19,34 @@ const Footer = () =>{
         <section id="footer">
             <div className="bg-white text-slate-700 relative">
                 <div>
-                    <div className=" py-10 px-20 ">
+                    <div className=" py-5 px-20 ">
                     <div className="grid gap-10 md:gap-20 md:grid-cols-2 xl:grid-cols-3 pb-10 ">
                         
-                        <div className="space-y-6">
+                        <div className="space-y-2">
                             {/* <h4 className="font-bold text-lg capitalize">about app</h4> */}
                             <img className=' w-52 h-52 sm:w-32 sm:h-32 md:w-20 md:h-20' src="/images/logo.png" alt="" />
-                            <p className='text-eco  font-extrabold text-xl tracking-wider leading-relaxed'>ECOACHING.MA</p>
-                          <p className=' tracking-wide text-lg font-semibold leading-relaxed'>Coaching - Accompaniment - Advice</p>
-                            <div className=" flex gap-4 items-center">
+                            <div className="pl-2">
+                            <p className='text-eco  font-extrabold text-lg tracking-wider leading-relaxed'>ECOACHING.MA</p>
+                          <p className=' tracking-wide text font-semibold leading-relaxed'>Coaching - Accompaniment - Advice</p>
+
+                            </div>
+                            <div className=" flex gap-4 items-center pt-5">
                                 
                                 <div className="flex gap-4 items-center">
                                 <Link href="">
                                     <FaFacebookF className="h-6 w-7 text-eco hover:opacity-50 transition-all duration-500" />
                                 </Link>
                                 <Link href="#" target="_blank">
-                                <AiFillInstagram className="h-8 w-8 text-eco hover:opacity-50 transition-all duration-500 " />
+                                <AiFillInstagram className="h-7 w-7 text-eco hover:opacity-50 transition-all duration-500 " />
                                 </Link>
                                 <Link href="#" target="_blank">
-                                <AiOutlineTwitter className="h-8 w-8 text-eco hover:opacity-50 transition-all duration-500 " />
+                                <AiOutlineTwitter className="h-7 w-7 text-eco hover:opacity-50 transition-all duration-500 " />
                                 </Link>
                                 <Link href="#" target="_blank">
-                                <BsWhatsapp className="h-7 w-7 text-eco hover:opacity-50 transition-all duration-500 " />
+                                <BsWhatsapp className="h-6 w-6 text-eco hover:opacity-50 transition-all duration-500 " />
                                 </Link>
                                 <Link href="#" target="_blank">
-                                <BsLinkedin className="h-7 w-7 text-eco hover:opacity-50 transition-all duration-500 " />
+                                <BsLinkedin className="h-6 w-6 text-eco hover:opacity-50 transition-all duration-500 " />
                                 </Link>
                                
                                 
@@ -55,18 +58,18 @@ const Footer = () =>{
 
                             </div>
                         </div>
-                        <div className="flex pt-3 gap-10">
-                        <div className="w-1/2 space-y-6 ">
+                        <div className="flex pt-5 gap-10">
+                        <div className="w-1/2 space-y-4 md:space-y-9 ">
                                 <div >
                                     <p className="font-bold text-xl ">Services</p>
                                 </div>
                                 <div className=" flex flex-col gap-2">
-                                    <Link className="font-semibold underline hover:opacity-50  hover:no-underline transition-all duration-500 ease-in-out" href="#">Business Coaching</Link>
-                                    <Link className="font-semibold underline hover:opacity-50  hover:no-underline transition-all duration-500 ease-in-out" href="#">Individual Coaching</Link>
-                                    <Link className="font-semibold underline hover:opacity-50  hover:no-underline transition-all duration-500 ease-in-out" href="#">Workshops</Link>
+                                    <Link className="font-semibold underline hover:opacity-50 text-sm hover:no-underline transition-all duration-500 ease-in-out" href="#">Business Coaching</Link>
+                                    <Link className="font-semibold underline hover:opacity-50 text-sm hover:no-underline transition-all duration-500 ease-in-out" href="#">Individual Coaching</Link>
+                                    <Link className="font-semibold underline hover:opacity-50 text-sm hover:no-underline transition-all duration-500 ease-in-out" href="#">Workshops</Link>
                                 </div>
                             </div>
-                            <div className="space-y-6 w-1/2">
+                            <div className="space-y-4 md:space-y-9 w-1/2">
                                 <div >
                                     <h4 className="font-bold text-xl capitalize">quick links</h4>
                                 </div>
@@ -82,16 +85,16 @@ const Footer = () =>{
                             </div>
                             
                         </div>
-                        <div className="space-y-6 pt-3 mx-auto ">
+                        <div className="space-y-4 md:space-y-9 pt-5 mx-auto ">
                             <div >
                                 <p className="font-bold text-xl">Contact Us</p>
                             </div>
                             <div className="space-y-5">
                                
-                                <p>  <TbGps className="w-10 h-10 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-lg pl-2">Technopark, Ave Mohammed V, Tangier 90000, Morocco</span></p>
-                                <p>  <MdEmail className="w-10 h-10 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-lg pl-2">contact@ecoaching.ma</span></p>
-                                <p>  <BsFillTelephoneFill className=" w-9 h-9 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-lg pl-2">+212 775 648 584</span></p>
-                                    <p>  <BiSolidTimeFive className="w-10 h-10 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-lg pl-2">Sat-Thu 9 a.m. - 6 p.m.</span></p>
+                                <p>  <TbGps className="w-8 h-8 inline-block text-eco"/>  <span className="leading-relaxed capitalize  pl-2">Technopark, Ave Mohammed V, Tangier 90000, Morocco</span></p>
+                                <p>  <MdEmail className="w-8 h-8 inline-block text-eco"/>  <span className="leading-relaxed capitalize  pl-2">contact@ecoaching.ma</span></p>
+                                <p>  <BsFillTelephoneFill className=" w-6 h-6 inline-block text-eco"/>  <span className="leading-relaxed capitalize  pl-2">+212 775 648 584</span></p>
+                                    <p>  <BiSolidTimeFive className="w-8 h-8 inline-block text-eco"/>  <span className="leading-relaxed capitalize  pl-2">Sat-Thu 9 a.m. - 6 p.m.</span></p>
                                 {/* <div className="w-[80%] h-12 bg-white rounded-md flex">
                                     <div className="h-full w-[85%]">
                                         <input className="h-full w-full bg-white rounded-l-md text-slate-800 font-semibold px-2 focus:outline-none" 

@@ -17,12 +17,12 @@ function First() {
    <section className='bg-bg'>
     {/* <Modal isOpen={isOpen} closeModal={closeModal}/> */}
     <div className='pb-20 container mx-auto'>
-        <div className='text-slate-800 text-center py-10'>
+        <div className='text-slate-800 text-center py-5'>
             <MessageWriter />
         </div>
         <div className='flex  justify-center items-center flex-col-reverse lg:flex-row gap-20 '>
             <div className='lg:w-1/2 w-full flex justify-center flex-col gap-10 '>
-                <div className=' tracking-wide px-8 md:px-4 space-y-4 leading-relaxed text-xl text-slate-800 font-bold'>
+                <div className=' tracking-wide px-8 md:px-4 space-y-4 leading-relaxed text-lg text-slate-800 font-semibold'>
                     <p>
                     Welcome to ecoaching.ma, the premier destination for transformative coaching experiences. Founded by Mohammed Amine Barnousi, a seasoned certified coach with a rich background in mechanical engineering and extensive global exposure. With over a decade of hands-on involvement in diverse sectors, including renewable energy, real estate, education, and logistics, our platform stands as a gateway to personalized growth.
                     </p>

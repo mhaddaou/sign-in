@@ -9,7 +9,7 @@ const MessageWriter = () => {
 
   return (
     <div className=''>
-        <div className='text-blue-800 text-4xl font-extrabold capitalize leading-relaxed'>
+        <div className='text-blue-800 text-3xl font-extrabold capitalize leading-relaxed'>
       <span> <span className='text-white '></span > {text}</span>
       <Cursor  cursorStyle='_'></Cursor>
 
