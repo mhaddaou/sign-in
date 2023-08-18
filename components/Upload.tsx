@@ -49,7 +49,9 @@ const Upload = () =>{
                     try{
                         axios.post(`${process.env.Clouad}`, form)
                         .then((result) =>{
+                            console.log(result.data.secure_url, ' here')
                             setUrl(result.data.secure_url);
+                            console.log('this is url ' , url);
                             // context?.setImg(result.data.secure_url);
                             // sendToBck(result.data.secure_url);
                             setColor('bg-green-500');

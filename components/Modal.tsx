@@ -28,19 +28,19 @@ const FirstStep = () =>{
                         <div className='w-full flex items-center'>
                             <div className='w-[30%]  font-bold text-center'>Email</div>
                             <div className='w-[70%] flex gap-5'>
-                                    <input type="text" placeholder="example@gmail.com" className="input bg-slate-100 input-bordered input-primary font-mono input-md w-full " />
+                                    <input type="email" placeholder="example@gmail.com" className="input bg-slate-100 input-bordered input-primary font-mono input-md w-full " />
                             </div>
                         </div>
                         <div className='w-full flex items-center'>
                             <div className='w-[30%] pb-6 font-bold text-center'>Phone</div>
                             <div className='w-[70%] flex gap-5'>
                                 <div className='w-[30%]'>
-                                    <input type="text" placeholder="" className="input bg-slate-100 input-bordered input-md input-primary font-mono w-full max-w-xs" />
+                                    <input type="phone" placeholder="" className="input bg-slate-100 input-bordered input-md input-primary font-mono w-full max-w-xs" />
                                 <p className='pl-2 text  text-sm font-semibold capitalize pt-1'>Area Code</p>
 
                                 </div>
                                 <div className='w-[70%]'>
-                                    <input type="text" placeholder=" " className="input bg-slate-100 input-bordered input-md input-primary font-mono w-full max-w-xs" />
+                                    <input type="phone" placeholder=" " className="input bg-slate-100 input-bordered input-md input-primary font-mono w-full max-w-xs" />
                                 <p className='pl-2 text  text-sm font-semibold capitalize pt-1'>phone number</p>
 
 
