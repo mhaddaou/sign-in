@@ -8,13 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors:{
+        'bg':'#f5f8fb',
+        'head' : '#B2FCFF',
+        'eco' : '#2880D1',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          
+        'footer-texture': "url('/img/footer-texture.png')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 export default config
