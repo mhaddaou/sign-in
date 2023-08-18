@@ -2,6 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux'; 
 import { getUsers } from '@/components/fetSlice';
 import { AppDispatch } from '@/components/store';
+import Header from '@/components/Header';
+import First from '@/components/First';
+import Footer from '@/components/Footer';
+import Down from '@/components/Down';
 
 
 function Index() {
@@ -12,9 +16,17 @@ function Index() {
   }, [dispatch]);
   
   return (
-    <main className='text-3xl font-extrabold underline font-mono hover:opacity-50 cursor-pointer hover:no-underline'>
-      hello
-    </main>
+    <main className=''>
+    <header className='bg-white'>
+      <Header />
+    </header>
+  <First/>
+  <Footer/>
+  <Down/>
+  
+   
+   </main>
+
   );
 }
 
