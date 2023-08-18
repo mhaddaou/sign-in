@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux'; // Import useDispatch
+import { useDispatch } from 'react-redux'; 
 import { getUsers } from '@/components/fetSlice';
 
-// Rename the component to start with an uppercase letter
+
 function Index() {
-  const dispatch = useDispatch(); // Get the dispatch function from react-redux
+  const dispatch = useDispatch();
   
   useEffect(() => {
-    dispatch(getUsers()); // Dispatch the action using the dispatch function
+    dispatch(getUsers()); 
   }, [dispatch]);
   
   return (
@@ -17,4 +17,4 @@ function Index() {
   );
 }
 
-export default Index; // Export the component with the updated name
+export default Index; 
