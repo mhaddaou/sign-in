@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux'; 
 import { getUsers } from '@/components/fetSlice';
+import { AppDispatch } from '@/components/store';
 
 
 function Index() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   
   useEffect(() => {
     dispatch(getUsers()); 
