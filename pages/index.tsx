@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux'; 
-import { getUsers } from '@/components/fetSlice';
-import { AppDispatch } from '@/components/store';
+import { getUsers } from '@/components/reduxToolkit/fetSlice';
+import { AppDispatch } from '@/components/reduxToolkit/store';
 import Header from '@/components/Header';
 import First from '@/components/First';
 import Footer from '@/components/Footer';
