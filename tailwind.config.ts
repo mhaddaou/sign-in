@@ -12,6 +12,7 @@ const config: Config = {
         'bg':'#f5f8fb',
         'head' : '#B2FCFF',
         'eco' : '#2880D1',
+        'txt' : '#0a66c2',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

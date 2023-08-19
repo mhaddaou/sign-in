@@ -1,4 +1,6 @@
 import React, { ChangeEvent, ChangeEventHandler, ReactEventHandler, useEffect, useState } from 'react'
+import Router from 'next/router';
+const router = Router;
 import { setFirst, 
 setSecond, 
 setThird,
@@ -108,7 +110,8 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
         <div className='fixed bg-black inset-0    bg-opacity-50 z-50'>
             <div className='container mx-auto w-1/2  py-20'>
                 <div className='bg-white opacity-100 rounded-2xl p-5'>
-                    {num == 1 ?  <div  className='flex text-slate-800 pt-5 '>
+                    {num == 1 ?  
+                    <div  className='flex text-slate-800 pt-5 '>
                            <div className='w-[90%] mx-auto  h-full space-y-8'>
                             <div className='w-full flex items-center'>
                                 <div className='w-[30%] pt-6 font-bold text-center'>Name</div>
@@ -206,7 +209,7 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
                         </div>
                         <div>
                             <button className={`${num === 4 ? 'hidden' : ''}`} onClick={() => Next()}>Next</button>
-                            <button className={`${num !== 4 ? 'hidden' : ''}`} onClick={() => console.log('done')}>Done</button>
+                            <button className={`${num !== 4 ? 'hidden' : ''}`} onClick={() => router.push('/Dashboard')}>Done</button>
                         </div>
                         <div>
                             <button onClick={() => closeModal()}>close</button>
