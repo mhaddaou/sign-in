@@ -44,16 +44,13 @@ function Activity() {
                     </div>
                     <div className='flex gap-3 items-center'>
                         <div className='pt-2 w-16 h-16'>
-                            {/* <img className='  scale-125 overflow-hidden  rounded-lg  inse' src="/images/financial.jpeg" alt="sd" /> */}
                             <div className='h-16 w-16 rounded-xl scale-100 overflow-hidden '>
-                                <Image src={blog3} alt='img' className=' scale-150 w-full h-full  cursor-pointer ease-in-out'/>
-                            
-
+                                <img src="/images/financial.jpeg" alt='img' className=' scale-150 w-full h-full  cursor-pointer ease-in-out'/>
                             </div>
                         </div>
                         <div className='space-y-4 pt-4'>
                             <p>📈 Excited to showcase my new responsive Financial App Front-end! 💼💰</p>
-                                <p>I'm thrilled to unveil my latest project: a sleek and user-friendly financial app built entirely on th</p>
+                                <p>I &apos; m thrilled to unveil my latest project: a sleek and user-friendly financial app built entirely on th</p>
                         </div>
 
                     </div>
