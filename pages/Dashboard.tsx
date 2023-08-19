@@ -7,7 +7,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RooteState, AppDispatch } from '@/components/reduxToolkit/store'
 import axios from 'axios'
 import { useRef } from 'react'
-
+import About from '@/components/About'
+import Languages from '@/components/Languages'
+import Skills from '@/components/Skills'
+import Activity from '@/components/Activity'
+import Project from '@/components/Project'
+import Education from '@/components/Education'
 function Dashbord() {
   const [data, setData] = useState<string[]>([])
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -39,8 +44,8 @@ function Dashbord() {
       <Header />
     </header>
     <section className='bg-bg'>
-      <div className='container py-8 mx-auto bg--400'>
-      <div className='bg--400 mx-20 flex gap-2 md:gap-8 md:flex-row flex-col '>
+      <div className='container py-8 mx-auto bg--400 '>
+      <div className='bg--400 mx-5  md:mx-10 xl:mx-20 flex gap-2 md:gap-8 md:flex-row flex-col '>
       <div className='h-full w-full md:w-[70%] bg-'>
       <div className='space-y-2'>
               <div className='rounded bg-green-500'>
@@ -67,12 +72,19 @@ function Dashbord() {
                 </div>
                 <div></div>
               </div>
+
               <div className='rounded bg--500 text-black'>
                 
               </div>
               <div className='rounded bg--500'>dd</div>
-
+              <About />
+              <Activity />
+              <Education />
+              <Project />
+              <Languages />
+              <Skills />
             </div>
+           
           </div>
           <div className='h-full w-full md:w-[30%] bg-white'>right</div>
         </div>
@@ -82,7 +94,9 @@ function Dashbord() {
 
     
   <Footer/>
+  <div className='text-white'>
   <Down/>
+  </div>
   
    
    </main>
