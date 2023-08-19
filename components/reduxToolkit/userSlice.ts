@@ -9,12 +9,12 @@ interface locationType {
     city : string;
 }
 
-type initialType = {
+export type initialType = {
     firstName : string;
     lastName : string;
     email : string;
     phone : phoneType;
-    heading : string;
+    headline : string;
     education : string;
     location : locationType;
     img : string;
@@ -31,7 +31,7 @@ const initialState : initialType = {
         area : "",
         phone : 0,
     },
-    heading : "",
+    headline : "",
     education : "",
     location : {
         country : "",
@@ -59,8 +59,8 @@ const userSlice = createSlice({
         setPhone : (state, action : PayloadAction<phoneType>) =>{
             state.phone = action.payload;
         },
-        setHeading : (state, action : PayloadAction<string>) =>{
-            state.heading = action.payload;
+        setHeadline : (state, action : PayloadAction<string>) =>{
+            state.headline = action.payload;
         },
         setEducation : (state, action : PayloadAction<string>) =>{
             state.education = action.payload;
@@ -83,5 +83,5 @@ const userSlice = createSlice({
     }
 })
 
-export const {setFirstName, setLastName, setEmail, setPhone, setHeading, setEducation, setLocation, setImage, setFirst, setSecond, setThird} = userSlice.actions;
+export const {setFirstName, setLastName, setEmail, setPhone, setHeadline, setEducation, setLocation, setImage, setFirst, setSecond, setThird} = userSlice.actions;
 export default userSlice.reducer;

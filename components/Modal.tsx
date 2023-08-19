@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ChangeEventHandler, ReactEventHandler, useState } from 'react'
+import React, { ChangeEvent, ChangeEventHandler, ReactEventHandler, useEffect, useState } from 'react'
 import { setFirst, 
 setSecond, 
 setThird,
@@ -6,9 +6,14 @@ setFirstName,
 setLastName,
 setEducation,
 setEmail,
-setHeading,
-setImage} from './reduxToolkit/userSlice';
+setHeadline,
+setImage,
+setPhone,
+setLocation} from './reduxToolkit/userSlice';
+import { RooteState, AppDispatch } from './reduxToolkit/store';
+import { useDispatch, useSelector } from 'react-redux';
 import Upload from './Upload';
+import { initialType } from './reduxToolkit/userSlice';
 
 interface ModalProps{
     isOpen : boolean;
@@ -28,22 +33,33 @@ const Check = (str : string) =>{
 
 
 const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
+    const dispatch = useDispatch<AppDispatch>();
+
+   
+    // const user = useSelector((state:RooteState) => state.user);
+
     const [num, setNum] = useState(1);
     const [first, setFirst] = useState('');
     // const [last, setLast] = 
     
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [area, setArea] = useState('');
-    const [email, setEmail] = useState('');
-    const [number, setNumber] = useState('');
-    const [education, setEducation] = useState('');
-    const [heading, setHeading] = useState('');
-    const handlFirstName = (e : ChangeEvent<HTMLInputElement>) => setFirstName(e.target.value)
-    const handlLastName = (e : ChangeEvent<HTMLInputElement>) => setLastName(e.target.value)
-    const handlEmail = (e : ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)
-    const handlArea = (e : ChangeEvent<HTMLInputElement>) => setArea(e.target.value)
-    const handlNumber = (e : ChangeEvent<HTMLInputElement>) => setNumber(e.target.value)
+    const [last, setLast] = useState('');
+    const [area, setarea] = useState('');
+    const [email, setemail] = useState('');
+    const [number, setnumber] = useState('');
+    const [edu, setEdu] = useState('');
+    const [head, setHead] = useState('');
+    const [coun, setCoun] = useState('');
+    const [cit, setCit] = useState('')
+
+    const handlFirstName = (e : ChangeEvent<HTMLInputElement>) => setFirst(e.target.value)
+    const handlLastName = (e : ChangeEvent<HTMLInputElement>) => setLast(e.target.value)
+    const handlEmail = (e : ChangeEvent<HTMLInputElement>) => setemail(e.target.value)
+    const handlArea = (e : ChangeEvent<HTMLInputElement>) => setarea(e.target.value)
+    const handlNumber = (e : ChangeEvent<HTMLInputElement>) => setnumber(e.target.value)
+    const handlHead = (e : ChangeEvent<HTMLTextAreaElement>) => setHead(e.target.value)
+    const handlEdu = (e : ChangeEvent<HTMLInputElement>) => setEdu(e.target.value)
+    const handlCoun = (e : ChangeEvent<HTMLInputElement>) => setCoun(e.target.value)
+    const handlCit = (e : ChangeEvent<HTMLInputElement>) => setCit(e.target.value)
     
     
    
@@ -53,8 +69,36 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
 
     const Next = () =>{
         if (num === 1){
-            
+            dispatch(setFirstName(first));
+            dispatch(setLastName(last));
+            dispatch(setEmail(email));
+            dispatch(setPhone({
+                area: area,
+                phone: +number
+            }))
+            setNum(2);
+
         }
+        if (num === 2){
+            dispatch(setHeadline(head));
+            dispatch(setEducation(edu));
+            dispatch(setLocation({
+                country : coun,
+                city : cit
+            }));
+            setNum(3);
+        }
+        if (num === 3){
+            while(true){
+                console.log('afen')
+                if (localStorage.getItem('img')?.length !== undefined && localStorage.getItem('img')?.length !== null ){
+                    console.log(localStorage.getItem('img'));
+                    break;
+                }
+            }
+            setNum(4);
+        }
+
         
     }
     
@@ -71,11 +115,11 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
                                 <div className='w-[70%] flex gap-5'>
                                     <div>
                                         <p className='pl-2 text font-light text- capitalize pb-1'>first name<span className='text-slate-600'>*</span></p>
-                                        <input value={firstName} onChange={handlFirstName} type="text" placeholder="First Name" className="input bg-slate-100 input-primary input-bordered font-mono input-md w-full max-w-xs" />
+                                        <input value={first} onChange={handlFirstName} type="text" placeholder="First Name" className="input bg-slate-100 input-primary input-bordered font-mono input-md w-full max-w-xs" />
                                     </div>
                                     <div>
                                         <p className='pl-2 text font-light text- capitalize pb-1'>last name<span className='text-slate-600'>*</span></p>
-                                        <input value={lastName} onChange={handlLastName} type="text" placeholder="Last Name" className="input bg-slate-100 input-bordered  input-primary input-md font-mono w-full max-w-xs" />
+                                        <input value={last} onChange={handlLastName} type="text" placeholder="Last Name" className="input bg-slate-100 input-bordered  input-primary input-md font-mono w-full max-w-xs" />
                                     </div>
     
     
@@ -108,30 +152,31 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
                           
                         
                         </div> : null}
-                    {num == 2 ? <div  className='flex text-slate-800 pt-5 '>
+                    {num == 2 ? 
+                    <div  className='flex text-slate-800 pt-5 '>
                     <div className='w-[90%] mx-auto  h-full space-y-8'>
                     <div className='w-full flex items-center'>
                                 <div className='w-[30%]  font-bold text-center'>Headline<span className='text-slate-600'>*</span></div>
                                 <div className='w-[70%] flex gap-5'>
-                                <textarea className="textarea textarea-primary w-full bg-white" placeholder="Headline"></textarea>
+                                <textarea value={head} onChange={handlHead} className="textarea textarea-primary w-full bg-white" placeholder="Headline"></textarea>
                                 </div>
                             </div>
                             <div className='w-full flex items-center'>
                                 <div className='w-[30%]  font-bold text-center'>Education<span className='text-slate-600'>*</span></div>
                                 <div className='w-[70%] flex gap-5'>
-                                        <input type="text" placeholder="" className="input bg-white input-bordered input-primary font-mono input-md w-full " />
+                                        <input value={edu} onChange={handlEdu} type="text" placeholder="" className="input bg-white input-bordered input-primary font-mono input-md w-full " />
                                 </div>
                             </div>
                             <div className='w-full flex items-center'>
                                 <div className='w-[30%] pb-6 font-bold text-center'>Location</div>
                                 <div className='w-[70%] flex gap-5'>
                                     <div className='w-[40%]'>
-                                        <input type="text" placeholder="" className="input bg-white input-bordered input-primary input-md font-mono w-full max-w-xs" />
+                                        <input  type="text" value={coun} onChange={handlCoun} placeholder="" className="input bg-white input-bordered input-primary input-md font-mono w-full max-w-xs" />
                                     <p className='pl-2 text  text-sm font-semibold capitalize pt-1'>Country/Region<span className='text-slate-600'>*</span></p>
     
                                     </div>
                                     <div className='w-[60%]'>
-                                        <input type="text" placeholder=" " className="input input-primary bg-white input-bordered input-primaryinput-md font-mono w-full max-w-xs" />
+                                        <input type="text" value={cit} onChange={handlCit} placeholder=" " className="input input-primary bg-white input-bordered input-primaryinput-md font-mono w-full max-w-xs" />
                                     <p className='pl-2 text  text-sm font-semibold capitalize  pt-1'>City<span className='text-slate-600'>*</span></p>
     
     
@@ -140,7 +185,8 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
                             </div>
                     </div>
                 </div> : null}
-                    {num == 3 ?  <div  className='flex text-slate-800 pt-5 '>
+                    {num == 3 ?  
+                    <div  className='flex text-slate-800 pt-5 '>
                 <div className='w-[90%] mx-auto  h-full space-y-8'>
                     <div className='text-center py-10'>
                         Upload Image
@@ -159,7 +205,8 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
                             }}>Previous</button>
                         </div>
                         <div>
-                            <button onClick={() => Next()}>Next</button>
+                            <button className={`${num === 4 ? 'hidden' : ''}`} onClick={() => Next()}>Next</button>
+                            <button className={`${num !== 4 ? 'hidden' : ''}`} onClick={() => console.log('done')}>Done</button>
                         </div>
                         <div>
                             <button onClick={() => closeModal()}>close</button>
