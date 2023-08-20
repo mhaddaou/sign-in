@@ -31,7 +31,7 @@ function Activity() {
                 </div>
                 <div className='pt-6 border-b pb-4 border-slate-200'>
                     <div>
-                        <p className=' text-xs font-light   `'><span className=' font-semibold text-slate-500'>Mohamed Haddaoui</span> reposted this • 1d</p>
+                        <p className=' text-xs font-light'><span className=' font-semibold text-slate-500'>Mohamed Haddaoui</span> reposted this • 1d</p>
                     </div>
                     <div className='pt-2'>
                         <img className=' w-16 h-16 rounded-lg' src="/images/hiring.jpeg" alt="sd" />
@@ -42,7 +42,7 @@ function Activity() {
                 </div>
                 <div className='pt-4 border- border-slate-200'>
                     <div>
-                        <p className=' text-xs font-light   `'><span className=' font-semibold text-slate-500'>Mohamed Haddaoui</span> posted this • 1w</p>
+                        <p className=' text-xs font-light'><span className=' font-semibold text-slate-500'>Mohamed Haddaoui</span> posted this • 1w</p>
                     </div>
                     <div className='flex gap-3 items-center'>
                         <div className='pt-2 w-16 h-16'>

@@ -14,7 +14,7 @@ function Card() {
 
             </div>
             <div className='-bottom-32 -left-10 absolute  rounded-full h-72 w-72 z-10'>
-                <img className=' w-full  h-full rounded-full scale-50 border-8 border-white   ' src={context.img} alt=""  />
+                <img className=' w-full  h-full rounded-full scale-50 border-8 border-white' src={context.img} alt="dsf" height={100} width={100}  />
             </div>
         </div>
         <div className='pt-5   z-10 flex justify-end'>
@@ -26,7 +26,7 @@ function Card() {
                
             </div>
             <div>
-                <p className='text-slate-800 opacity-90 w-[65%] font-medium pt-1'>Front End Developer | Software Engineer student at 1337 coding school | I'm looking for an internship</p>
+                <p className='text-slate-800 opacity-90 w-[65%] font-medium pt-1'>Front End Developer | Software Engineer student at 1337 coding school | I&apos;m looking for an internship</p>
             </div>
             <div className=' text-sm py-2'>
             <p className=' md:inline  text-black opacity-50'>Meknes, Fès-Meknès, Morocco</p> <Link className=' font-semibold text-txt hover:underline' href="#">Contact info</Link>

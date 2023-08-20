@@ -21,7 +21,7 @@ function Education() {
                 </div>
                 <div className='flex justify- gap-2 border-b py-4'>
                   <div>
-                  <img className=' w-16 xl:w-12  h-12 ' src="/images/1337.jpeg" alt="" />
+                  <img className=' w-16 xl:w-12  h-12 ' src="/images/1337.jpeg" alt="" width={100} height={100}/>
 
                   </div>
                   <div className='space-y-3'>
@@ -31,7 +31,7 @@ function Education() {
                 </div>
                 <div className='flex justify- gap-2  '>
                   <div>
-                  <img className=' w-12 h-12' src="/images/mek.jpeg" alt="" />
+                  <img className=' w-12 h-12' src="/images/mek.jpeg" alt="" width={100} height={100}/>
 
                   </div>
                   <div className='space-y-'>

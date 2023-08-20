@@ -64,7 +64,6 @@ const MyContextProvider = ({ children }: ChildProps) => {
     const getCountry = localStorage.getItem('country');
     const getCity = localStorage.getItem('city');
     const getAbout = localStorage.getItem('about');
-
     if (getName)
       setName(getName);
     if (getimg)

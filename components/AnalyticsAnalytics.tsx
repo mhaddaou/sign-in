@@ -25,7 +25,7 @@ function AnalyticsAnalytics() {
     </div>
     <div>
         <p className='pl-7 text-sm opacity-80'>
-        Discover who's viewed your profile.
+        Discover who&apos;s viewed your profile.
         </p>
     </div>
             </div>
@@ -41,7 +41,7 @@ function AnalyticsAnalytics() {
     </div>
     <div>
         <p className='pl-7 text-sm opacity-80'>
-        Check out who's engaging with your posts.
+        Check out who&apos;s engaging with your posts.
         </p>
     </div>
             </div>
