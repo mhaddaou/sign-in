@@ -67,9 +67,9 @@ const MyContextProvider = ({ children }: ChildProps) => {
     if (getName)
       setName(getName);
     if (getimg)
-      setName(getimg);
+      setImg(getimg);
     if (getEmail)
-      setName(getEmail);
+      setEmail(getEmail);
     if (getPhone){
       const value = parseInt(getPhone);
       setPhone(value);

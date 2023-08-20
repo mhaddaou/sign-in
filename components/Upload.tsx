@@ -21,10 +21,8 @@ const Upload = () =>{
                         axios.post(`${process.env.Clouad}`, form)
                         .then((result) =>{
                             setUrl(result.data.secure_url);
-                            
-                            // dispatch(setImage(result.data.secure_url));
                             context.setImg(result.data.secure_url);
-                            localStorage.setItem('img', result.data.secure_url);
+                            
                         })
                     }catch(e){}  
             }
