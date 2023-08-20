@@ -91,10 +91,10 @@ const Footer = () =>{
                             </div>
                             <div className="space-y-5">
                                
-                                <p>  <TbGps className="w-6 h-6 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-sm pl-2">Technopark, Ave Mohammed V, Tangier 90000, Morocco</span></p>
-                                <p>  <MdEmail className="w-6 h-6 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-sm pl-2">contact@ecoaching.ma</span></p>
-                                <p>  <BsFillTelephoneFill className=" w-5 h-5 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-sm pl-2">+212 775 648 584</span></p>
-                                    <p>  <BiSolidTimeFive className="w-6 h-6 inline-block text-eco"/>  <span className="leading-relaxed capitalize text-sm pl-2">Sat-Thu 9 a.m. - 6 p.m.</span></p>
+                                <p>  <TbGps className="w-6 h-6 inline-block text-eco"/>  <span className="leading-relaxed text-sm pl-2">Technopark, Ave Mohammed V, Tangier 90000, Morocco</span></p>
+                                <p>  <MdEmail className="w-6 h-6 inline-block text-eco"/>  <span className="leading-relaxed gita text-sm pl-2">contact@ecoaching.ma</span></p>
+                                <p>  <BsFillTelephoneFill className=" w-5 h-5 inline-block text-eco"/>  <span className="leading-relaxed  text-sm pl-2">+212 775 648 584</span></p>
+                                    <p>  <BiSolidTimeFive className="w-6 h-6 inline-block text-eco"/>  <span className="leading-relaxed  text-sm pl-2">Sat-Thu 9 a.m. - 6 p.m.</span></p>
                                 {/* <div className="w-[80%] h-12 bg-white rounded-md flex">
                                     <div className="h-full w-[85%]">
                                         <input className="h-full w-full bg-white rounded-l-md text-slate-800 font-semibold px-2 focus:outline-none" 
