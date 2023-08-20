@@ -21,18 +21,18 @@ function Dashbord() {
 
   
   return (
-    <main className=''>
+    <main className=' '>
     <header className='h-16 bg-white'>
       <Header />
     </header>
-    <section className='bg-bg'>
+    <section className='bg-bg '>
       <div className='container py-8 mx-auto bg--400 '>
       <div className='bg--400   md:mx-10 xl:mx-20 flex gap-2 md:gap-8 md:flex-row flex-col '>
       <div className='h-full w-full md:w-[75%] bg-'>
       <div className='space-y-2'>
               
               
-
+            
              <Card/>
               <AnalyticsAnalytics/>
               <Resources/>

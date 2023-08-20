@@ -15,6 +15,7 @@ const config: Config = {
         'txt' : '#0a66c2',
         'bttn' : '#01754f',
         'open' : '#0a66c2',
+        'eng' : '#01754f',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
