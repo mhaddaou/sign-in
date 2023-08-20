@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { ChangeEvent, useContext, useState } from 'react'
 import Close from '../Close';
+import { MyContext } from '../Context';
 
 interface typeAbout{
     isOpen : boolean;
@@ -8,6 +9,13 @@ interface typeAbout{
 
 
 function ModalAbout({isOpen , closeModal} : typeAbout) {
+    const context = useContext(MyContext);
+    const [input, setInput] = useState('')
+    const handlchange = (e : ChangeEvent<HTMLTextAreaElement>) => setInput(e.target.value)
+    const save = () =>{
+        context.setAbout(input)
+        closeModal();
+    }
   return (
     <div className=' fixed bg-black inset-0    bg-opacity-80 z-50 scroll-smooth '>
         <div className='container bg-white mx-auto w-1/2 my-8 rounded-lg '>
@@ -27,10 +35,10 @@ function ModalAbout({isOpen , closeModal} : typeAbout) {
                 </p>
             </div>
             <div className='px-7 pt-1 pb-6'>
-            <textarea className=" w-full textarea textarea-primary bg-white h-[200px]" placeholder="About"></textarea>
+            <textarea value={input} onChange={handlchange} className=" w-full textarea textarea-primary bg-white h-[200px]" placeholder="About"></textarea>
             </div>
             <div className='px-7 py-4 border-t flex  justify-end'>
-                <button className='bg-blue-700 hover:bg-blue-900 font-semibold transition-all duration-500  text-white px-4 py-1 rounded-full '>Save</button>
+                <button onClick={save} className='bg-blue-700 hover:bg-blue-900 font-semibold transition-all duration-500  text-white px-4 py-1 rounded-full '>Save</button>
             </div>
         </div>
     </div>
