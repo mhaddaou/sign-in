@@ -35,7 +35,13 @@ function Card() {
         </div>
         <div className='w-[90%] z-20 mx-auto'>
             <div>
-                <h1 className=' cursor-pointer z-40 text-2xl text-black font-bold'>{context.name}</h1>
+                {
+                    context.name.split(' ').length === 0 ?
+                    <h1 className=' cursor-pointer z-40 text-2xl text-black font-bold'>Mohamed Haddaoui</h1>:
+                    <h1>hello</h1>
+                }
+                
+                
                
             </div>
             <div>
