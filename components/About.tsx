@@ -1,11 +1,12 @@
 import React from 'react'
 import {GiPencil} from 'react-icons/gi'
+import Pencel from './Pencel'
 function About() {
   return (
     <div className='bg-white  text-slate-700 rounded-md p-5 space-y-3'>
     <div className='flex  justify-between items-center'>
       <h1 className='font-semibold'>About</h1>
-      <GiPencil className='w-6 h-6'/>
+      <Pencel />
 
 
     </div>

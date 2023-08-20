@@ -1,12 +1,10 @@
 import axios from "axios";
 import React, {ChangeEvent, useContext, useEffect, useState} from "react";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "./reduxToolkit/store";
-import { setImage } from "./reduxToolkit/userSlice";
+import { MyContext } from "./Context";
 
 const Upload = () =>{
+    const context = useContext(MyContext);
 
-    const dispatch = useDispatch<AppDispatch>();
     const [url, setUrl] = useState<string | null>(null);
     const [file, setFile] = useState<File | null>(null)
     
@@ -24,7 +22,8 @@ const Upload = () =>{
                         .then((result) =>{
                             setUrl(result.data.secure_url);
                             
-                            dispatch(setImage(result.data.secure_url));
+                            // dispatch(setImage(result.data.secure_url));
+                            context.setImg(result.data.secure_url);
                             localStorage.setItem('img', result.data.secure_url);
                         })
                     }catch(e){}  

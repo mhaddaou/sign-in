@@ -14,6 +14,7 @@ const config: Config = {
         'eco' : '#2880D1',
         'txt' : '#0a66c2',
         'bttn' : '#01754f',
+        'open' : '#0a66c2',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

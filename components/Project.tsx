@@ -3,6 +3,8 @@ import React from 'react'
 import {GiPencil} from 'react-icons/gi'
 import {HiMiniFolder} from 'react-icons/hi2'
 import {BsArrowRightShort} from 'react-icons/bs'
+import Plus from './Plus'
+import Pencel from './Pencel'
 
 function Project() {
   return (
@@ -13,8 +15,9 @@ function Project() {
                         <h1 className='font-semibold text-lg'>Projects</h1>
                     </div>
                     <div className='flex items-center gap-6'>
-                        <p className='text-4xl font-extralight text-slate-600 cursor-pointer'>+</p>
-                        <GiPencil />
+                        <Plus/>
+                        <Pencel/>
+                        
 
                     </div>
                 </div>

@@ -1,5 +1,7 @@
 import React from 'react'
 import {GiPencil} from 'react-icons/gi'
+import Plus from './Plus'
+import Pencel from './Pencel'
 function Languages() {
   return (
     <div className='bg-white text-black rounded-md'>
@@ -9,8 +11,8 @@ function Languages() {
                         <h1 className='font-semibold text-lg'>Languages</h1>
                     </div>
                     <div className='flex items-center gap-5'>
-                        <p className='text-4xl font-extralight text-slate-600 cursor-pointer'>+</p>
-                        <GiPencil />
+                        <Plus/>
+                        <Pencel/>
                     </div>
                 </div>
                 <div className='space-y-4'>

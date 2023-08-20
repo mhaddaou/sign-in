@@ -1,21 +1,10 @@
 import React, { ChangeEvent, ChangeEventHandler, ReactEventHandler, useEffect, useState } from 'react'
+import { MyContext } from './Context';
+import { useContext } from 'react';
 import Router from 'next/router';
 const router = Router;
-import { setFirst, 
-setSecond, 
-setThird,
-setFirstName,
-setLastName,
-setEducation,
-setEmail,
-setHeadline,
-setImage,
-setPhone,
-setLocation} from './reduxToolkit/userSlice';
-import { RooteState, AppDispatch } from './reduxToolkit/store';
-import { useDispatch, useSelector } from 'react-redux';
+
 import Upload from './Upload';
-import { initialType } from './reduxToolkit/userSlice';
 
 interface ModalProps{
     isOpen : boolean;
@@ -35,7 +24,7 @@ const Check = (str : string) =>{
 
 
 const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
-    const dispatch = useDispatch<AppDispatch>();
+    const context = useContext(MyContext);
 
    
     // const user = useSelector((state:RooteState) => state.user);
@@ -71,33 +60,21 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
 
     const Next = () =>{
         if (num === 1){
-            dispatch(setFirstName(first));
-            dispatch(setLastName(last));
-            dispatch(setEmail(email));
-            dispatch(setPhone({
-                area: area,
-                phone: +number
-            }))
+            context.setName( first + ' ' + last);
+            context.setEmail(email);
+            context.setArea(area);
+            context.setPhone(+number);
             setNum(2);
-
         }
         if (num === 2){
-            dispatch(setHeadline(head));
-            dispatch(setEducation(edu));
-            dispatch(setLocation({
-                country : coun,
-                city : cit
-            }));
+            context.setHeadline(head);
+            context.setEducation(edu);
+            context.setCountry(coun);
+            context.setCity(cit);
             setNum(3);
         }
         if (num === 3){
-            while(true){
-                console.log('afen')
-                if (localStorage.getItem('img')?.length !== undefined && localStorage.getItem('img')?.length !== null ){
-                    console.log(localStorage.getItem('img'));
-                    break;
-                }
-            }
+          
             setNum(4);
         }
 
@@ -217,7 +194,7 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
                     </div>
 
                 <div className='flex  justify-center'>
-                <ul className="steps text-slate-500 w-full steps-vertical lg:steps-horizontal">
+                <ul className="steps text-slate-500 w-full  steps-horizontal">
             <li className={`step ${num == 1 ? 'step-primary' : ''}`}> </li>
             <li className={`step ${num == 2 ? 'step-primary' : ''}`}> </li>
             <li className={`step ${num == 3 ? 'step-primary' : ''}`}> </li>

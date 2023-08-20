@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import {GiPencil} from 'react-icons/gi'
+import Pencel from './Pencel'
+import Plus from './Plus'
 
 
 function Education() {
@@ -12,8 +14,9 @@ function Education() {
                         <h1 className='font-semibold text-lg'>Education</h1>
                     </div>
                     <div className='flex items-center gap-5'>
-                        <p className='text-4xl font-extralight text-slate-600 cursor-pointer'>+</p>
-                        <GiPencil />
+                        {/* <p className='text-4xl font-extralight text-slate-600 cursor-pointer'>+</p> */}
+                        <Plus/>
+                        <Pencel/>
                     </div>
                 </div>
                 <div className='flex justify- gap-2 border-b py-4'>

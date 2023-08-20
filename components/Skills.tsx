@@ -3,6 +3,8 @@ import React from 'react'
 import {GiPencil} from 'react-icons/gi'
 import {HiMiniFolder} from 'react-icons/hi2'
 import {BsArrowRightShort} from 'react-icons/bs'
+import Pencel from './Pencel'
+import Plus from './Plus'
 
 
 function Skills() {
@@ -15,8 +17,8 @@ function Skills() {
                     </div>
                     <div className='flex items-center gap-6'>
                         <button className='text-txt font-semibold border px-4 py-1 hover:border-[2px]  hover:bg-blue-200 rounded-full border-txt'>Demonstrate skills</button>
-                        <p className='text-4xl font-extralight text-slate-600 cursor-pointer'>+</p>
-                        <GiPencil />
+                        <Plus/>
+                        <Pencel />
 
                     </div>
                 </div>
@@ -54,7 +56,7 @@ function Skills() {
                    
                 </div>
             </div>
-                <div className='h-full  w-full hover:bg-stone-200  cursor-pointer'>
+                <div className='h-full  w-full hover:bg-stone-200  hover:rounded-b-md cursor-pointer'>
                 <div className='  flex items-center border-t py-2 justify-center gap-3 text-slate-600 font-semibold'>
                         <p>Show all 19 skills</p>
                         <BsArrowRightShort className="w-5 h-5 font-semibold" />
