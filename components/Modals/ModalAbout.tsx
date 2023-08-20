@@ -17,8 +17,8 @@ function ModalAbout({isOpen , closeModal} : typeAbout) {
         closeModal();
     }
   return (
-    <div className=' fixed bg-black inset-0    bg-opacity-80 z-50 scroll-smooth '>
-        <div className='container bg-white mx-auto w-1/2 my-8 rounded-lg '>
+    <div className=' fixed bg-black inset-0    bg-opacity-80 px-2 md:px-0 z-50 scroll-smooth '>
+        <div className='container bg-white mx-auto w-full  md:w-1/2 my-8 rounded-lg '>
             <div className='border-b flex justify-between pl-7  pr-5 items-center py-2'>
                 <h1 className='text-lg font-semibold'>Edit about</h1>
                 <button onClick={() => closeModal()}><Close /></button>
