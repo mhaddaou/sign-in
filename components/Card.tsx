@@ -19,8 +19,12 @@ function Card() {
             </div>
             <div className='-bottom-32 -left-10 absolute  rounded-full h-72 w-72 z-10'>
                 <button className='w-full  h-full rounded-full scale-50 border-8 border-white'>
+                    {
+                        context.img.length === 0 ? 
+                            <img className=' w-full h-full rounded-full' src='/images/avatar.jpeg' alt="dsf" height={100} width={100}  />  :
+                            <img className=' w-full h-full rounded-full' src={context.img} alt="dsf" height={100} width={100}  />
+                    }
 
-                    <img className=' w-full h-full rounded-full' src={context.img} alt="dsf" height={100} width={100}  />
                 </button>
             </div>
         </div>

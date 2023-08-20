@@ -2,6 +2,8 @@ import React, { ChangeEvent, ChangeEventHandler, ReactEventHandler, useEffect, u
 import { MyContext } from './Context';
 import { useContext } from 'react';
 import Router from 'next/router';
+import isDone from '../public/animations/done.json'
+import Lottie from 'lottie-react'
 const router = Router;
 
 import Upload from './Upload';
@@ -31,6 +33,7 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
 
     const [num, setNum] = useState(1);
     const [first, setFirst] = useState('');
+    const [complet, setComplet] = useState(false);
     // const [last, setLast] = 
     
     const [last, setLast] = useState('');
@@ -84,8 +87,8 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
     if (!isOpen)
         return null;
     return (
-        <div className='fixed bg-black inset-0    bg-opacity-50 z-50'>
-            <div className='container mx-auto w-1/2  py-20'>
+        <div className='fixed bg-black inset-0  px-3 md:px-0  bg-opacity-50 z-50'>
+            <div className='container mx-auto w-full  md:w-1/2  py-20'>
                 <div className='bg-white opacity-100 rounded-2xl p-5'>
                     {num == 1 ?  
                     <div  className='flex text-slate-800 pt-5 '>
@@ -177,19 +180,25 @@ const Modal : React.FC<ModalProps> = ({isOpen, closeModal})=>{
                     </div>
                 </div>
             </div> : null}
+            {num === 4 ? 
+            <div className='w-[50%] mx-auto'>
+                <Lottie onComplete={() => setComplet(true)} loop={false}  animationData={isDone} />
+            </div> 
+            : null }
+            
                     <div className='text-slate-700 py-10 flex justify-end pr-5 gap-10'>
                     <div>
-                            <button onClick={() => {
+                            <button className='btnn' onClick={() => {
                                 if (num !==  1)
                                     setNum(num - 1)
                             }}>Previous</button>
                         </div>
                         <div>
-                            <button className={`${num === 4 ? 'hidden' : ''}`} onClick={() => Next()}>Next</button>
-                            <button className={`${num !== 4 ? 'hidden' : ''}`} onClick={() => router.push('/Dashboard')}>Done</button>
+                            <button className={`${num === 4 ? 'hidden' : 'btnn'}`} onClick={() => Next()}>Next</button>
+                            <button className={`${complet && (num  === 4) ? 'btnn' : 'hidden'}`} onClick={() => router.push('/Dashboard')}>Done</button>
                         </div>
                         <div>
-                            <button onClick={() => closeModal()}>close</button>
+                            <button className='btnn' onClick={() => closeModal()}>close</button>
                         </div>
                     </div>
 
